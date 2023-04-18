@@ -807,7 +807,7 @@ def fibers_executor(gray):
 
     skeleton, distance = medial_axis(gray, return_distance=True)
 
-    skel_labels = label(skeleton, neighbors=8)
+    skel_labels = label(skeleton, connectivity=2)
 
     props = regionprops(skel_labels)
 
